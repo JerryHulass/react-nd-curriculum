@@ -18,7 +18,7 @@ Understand the difference between **CommonJS (CJS)** and **ECMAScript Modules (E
 ---
 
 ## 🗂️ Project Structure
-```
+```js
 
 es-modules-assignment/
 │
