@@ -1,0 +1,13 @@
+body {
+  background-color: #262831;
+  color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
+/* Kebab */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+}
