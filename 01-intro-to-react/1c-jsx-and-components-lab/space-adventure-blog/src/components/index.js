@@ -5,5 +5,5 @@ import Main from "./Main";
 import Footer from "./Footer";
 
 // now export them
-
-export { Header, Navbar, Main, Footer };
+const x = { Header, Navbar, Main, Footer };
+export default x;
