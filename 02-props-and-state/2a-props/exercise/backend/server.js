@@ -34,9 +34,22 @@ const connectDB = require("./config/db");
  * (Part 3 )
  *
  * Populate your database with 3 users and 10 products
- * create your getALLProducts() getOneProduct()
- * postProduct() updateProduct() and deleteProduct()
- * We need to create the routes that goes with these functions.
+ * create your getALLProducts() getOneProduct() ✅
+ * postProduct() updateProduct() and deleteProduct() ✅
+ * We need to create the routes that goes with these functions. ✅
+ *
+ */
+
+/**
+ * Part 4
+ *
+ * create all of the same functionality for our users that we just created for our Products
+ * -- Move to our Frontend React application
+ * - I want you to create a components that will render your products
+ * - I want you to create a component that with have a form that will be used
+ * to add a product
+ * - I want you to create a component that updates a product
+ * - add some CSS styling to your project
  *
  */
 
