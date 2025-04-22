@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-export default function About() {
+export default function About({ info }) {
   const [name, setName] = useState("");
   const [dis, setDis] = useState("");
+  console.log(" You are logging out INFO from the about page.", info);
 
   useEffect(() => {
     const fetchdata = async () => {

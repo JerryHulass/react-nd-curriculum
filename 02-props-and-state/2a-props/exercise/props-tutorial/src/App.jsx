@@ -23,11 +23,23 @@ function App() {
 
   return (
     <>
-      <Home />
-      <About />
-      <Contact />
+      {/* PROP DRILLING AND RENDERING DATA */}
+      <Home info={"data"} />
+      <About info={"data"} />
+      <Contact info={"data"} />
     </>
   );
 }
 
 export default App;
+
+/*
+
+ Add Styling to to HOME,ABOUT, and CONTACT 
+
+ then I want you to pass PROPS from your App component
+  to your children Component(s).
+
+
+
+*/
