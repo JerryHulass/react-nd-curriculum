@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const logger = require("morgan");
+const connectDB = require("./config/db");
 
 /**
  * We are going to built routes (PART 1)
@@ -16,21 +17,34 @@ const logger = require("morgan");
  */
 
 /**
- * We will now use Mongoose in our application
- * We Need to create Our Schema for your DB
- * We will Create a Mongodb Project & Cluster
+ * (Part 2 )
+ * We will now use Mongoose in our application ✅
+ * We Need to create Our Schema for your DB ✅
+ * We will Create a Mongodb Project & Cluster ✅
  *
  * Create a .env file and add you connection string and password to
- * your .env file
+ * your .env file ✅
  *
- * Then Test your connect to your DATABASE
+ * Then Test your connect to your DATABASE ✅
  *
- * Two Schemas( Users & Products )
+ * Two Schemas( Users & Products ) ✅
+ */
+
+/**
+ * (Part 3 )
+ *
+ * Populate your database with 3 users and 10 products
+ * create your getALLProducts() getOneProduct()
+ * postProduct() updateProduct() and deleteProduct()
+ * We need to create the routes that goes with these functions.
+ *
  */
 
 const PORT = 8080;
 
 const server = express();
+// Connection to Database
+connectDB();
 
 // cors middleware preventing me from speaking between 2 servers
 server.use(cors());
