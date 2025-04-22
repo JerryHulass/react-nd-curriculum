@@ -49,7 +49,8 @@ const connectDB = require("./config/db");
  * to add a product -
  * - I want you to create a component that updates a product -
  * - add some CSS styling to your project -
- *
+ * - RESEARCH  (REACT-ROUTER) - is a Lib that we use in our react code to
+ *  travel between webpages
  */
 
 const PORT = 8080;
