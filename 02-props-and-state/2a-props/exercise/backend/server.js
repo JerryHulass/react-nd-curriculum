@@ -44,12 +44,11 @@ const connectDB = require("./config/db");
  * Part 4
  *
  * create all of the same functionality for our users that we just created for our Products
- * -- Move to our Frontend React application
- * - I want you to create a components that will render your products
+ * - I want you to create a components that will render your products ✅
  * - I want you to create a component that with have a form that will be used
- * to add a product
- * - I want you to create a component that updates a product
- * - add some CSS styling to your project
+ * to add a product -
+ * - I want you to create a component that updates a product -
+ * - add some CSS styling to your project -
  *
  */
 

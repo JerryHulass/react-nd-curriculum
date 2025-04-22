@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Products from "./Products";
 
 export default function Home() {
   const [data, setData] = useState("");
@@ -20,5 +21,10 @@ export default function Home() {
 
     setData(newPhrase);
   }, []);
-  return <div>{data}</div>;
+  return (
+    <>
+      <div>{data}</div>
+      <Products />
+    </>
+  );
 }
