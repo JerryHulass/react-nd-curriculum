@@ -15,6 +15,19 @@ const logger = require("morgan");
  * - Implement Any Middleware you Need ! * ✅
  */
 
+/**
+ * We will now use Mongoose in our application
+ * We Need to create Our Schema for your DB
+ * We will Create a Mongodb Project & Cluster
+ *
+ * Create a .env file and add you connection string and password to
+ * your .env file
+ *
+ * Then Test your connect to your DATABASE
+ *
+ * Two Schemas( Users & Products )
+ */
+
 const PORT = 8080;
 
 const server = express();
