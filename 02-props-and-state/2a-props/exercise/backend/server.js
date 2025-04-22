@@ -1,17 +1,18 @@
 const express = require("express");
 const cors = require("cors");
+const logger = require("morgan");
 
 /**
- * We are going to built routes
+ * We are going to built routes (PART 1)
  * ( Modularized and you seperate your concerns )
- * - Product Route
- *   - get All
- *   - get ID
- *   - post create a product
- *   - update update a product
- *   - delete to delete product given a id
+ * - Product Route(s) *
+ *   - get All ✅
+ *   - get ID ✅
+ *   - post create a product ✅
+ *   - update update a product ✅
+ *   - delete to delete product given a id ✅
  *
- * - Implement Any Middleware you Need !
+ * - Implement Any Middleware you Need ! * ✅
  */
 
 const PORT = 8080;
@@ -20,7 +21,13 @@ const server = express();
 
 // cors middleware preventing me from speaking between 2 servers
 server.use(cors());
+server.use(express.json());
+server.use(express.urlencoded({ extended: false }));
+server.use(logger("dev"));
 //testing
+
+server.use("/api", require("./Router"));
+
 server.get("/help", (req, res) => {
   res.send({
     phrase: "Hello World",
