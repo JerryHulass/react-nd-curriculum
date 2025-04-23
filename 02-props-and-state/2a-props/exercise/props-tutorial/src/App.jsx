@@ -1,32 +1,25 @@
 import "./App.css";
-import { useState, useEffect } from "react";
-import { About, Contact, Home } from "./components";
+import { About, Contact, Home, Navbar } from "./components";
+import { Routes, Route } from "react-router-dom";
+
 function App() {
-  const [phrase, setPhrase] = useState("");
-
-  // useEffect(() => {
-  //   const fetchdata = async () => {
-  //     try {
-  //       const data = await fetch("http://localhost:8080/help");
-  //       const response = await data.json();
-  //       console.log("This is my Response Data", response);
-  //       return response.phrase;
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   const newPhrase = fetchdata();
-
-  //   setPhrase(newPhrase);
-  // }, []);
-
   return (
     <>
       {/* PROP DRILLING AND RENDERING DATA */}
-      <Home info={"data"} />
+      <Navbar />
+      {/* <Home info={"data"} />
       <About info={"data"} />
-      <Contact info={"data"} />
+      <Contact info={"data"} /> */}
+
+      {/* ROUTES FRONTEND ROUTES */}
+      <Routes>
+        {/* Home Component */}
+        <Route path="/" element={<Home />} />
+        {/* About Component */}
+        <Route path="/about" element={<About />} />
+        {/* Contact Component */}
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }
