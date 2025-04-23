@@ -1,12 +1,17 @@
 import "./App.css";
-import { About, Contact, Home, Navbar } from "./components";
+import { useState } from "react";
+import { About, Contact, Home, Navbar, Register, Login } from "./components";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const [user, setUser] = useState([]);
+
   return (
     <>
       {/* PROP DRILLING AND RENDERING DATA */}
       <Navbar />
+      {/* Turanry thats going to say either Register or Login if we have a token */}
+      <Register user={user} setUser={setUser} />
       {/* <Home info={"data"} />
       <About info={"data"} />
       <Contact info={"data"} /> */}

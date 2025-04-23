@@ -27,6 +27,27 @@ const Register = async (req, res) => {
   }
 };
 
+const Login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    if (!user) res.status(404).json({ message: " User was not found " });
+
+    // compare and see if the password in the DB is equal to the password the user
+    // entered
+    if (password === user.password) {
+      res.status(200).json({ message: " User Logged in ", token: "token " });
+    }
+    console.log(user);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Create Basic Login (route, controller)  "Token"
+// Create A form(s) component for taking in a Register and to Login
+
 module.exports = {
   Register,
+  Login,
 };
