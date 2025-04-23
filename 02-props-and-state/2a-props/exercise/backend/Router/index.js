@@ -6,5 +6,6 @@ Router.get("/", (req, res) => {
 });
 
 Router.use("/products", require("./api/products"));
+Router.use("/users", require("./api/users"));
 
 module.exports = Router;
