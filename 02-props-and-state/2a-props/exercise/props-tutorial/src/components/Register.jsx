@@ -2,6 +2,11 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
+/**
+ * Create Login Component and its functionality
+ * I want you to store the token in Local_Storage.
+ */
+
 export default function Register({ user, setUser }) {
   // state
   const [formData, setFormData] = useState({
@@ -12,8 +17,11 @@ export default function Register({ user, setUser }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setFormData((prevData) => ({
+      // keep old data
       ...prevData,
+      // add my new data
       [name]: value,
     }));
   };
