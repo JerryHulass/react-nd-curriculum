@@ -35,8 +35,11 @@ const Login = async (req, res) => {
 
     // compare and see if the password in the DB is equal to the password the user
     // entered
+    console.log(password, "===", user.password);
     if (password === user.password) {
-      res.status(200).json({ message: " User Logged in ", token: "token " });
+      res
+        .status(200)
+        .json({ message: " User Logged in ", token: "I am a token" });
     }
     console.log(user);
   } catch (error) {

@@ -43,7 +43,8 @@ export default function Register({ user, setUser }) {
   console.log(formData);
 
   return (
-    <div className="" style={{ margin: "10px" }}>
+    <div className="" style={{ margin: "10px", backgroundColor: "green" }}>
+      REGISTER
       {/* // this is how we call the REGISTER FUNCTION */}
       <form onSubmit={handleSubmit}>
         <label>Username :</label>
@@ -66,7 +67,7 @@ export default function Register({ user, setUser }) {
 
         <label>Password :</label>
         <input
-          type="text"
+          type="password"
           name="password"
           value={formData.password} // check this in a little
           onChange={handleChange} // function
