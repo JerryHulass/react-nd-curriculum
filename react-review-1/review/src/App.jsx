@@ -1,7 +1,7 @@
 import "./App.css";
-import { useState, useEffect, useReducer } from "react";
-import About from "./components/About";
-
+import { useState, useEffect } from "react";
+import { About, Navbar, Routes, Form, AllPokemon } from "./components";
+import data from "../src/data/pokemonData";
 /**
  - useEffect 
 
@@ -30,6 +30,7 @@ function App() {
     email: "steven123@yahoo.com",
     username: "steven123",
     _id: 2,
+    data: data,
   }); // store Data in the frontend
 
   /**
@@ -41,12 +42,30 @@ function App() {
    We can pass props (data from one component to the next ) but we can't pass up data from child components 
       */
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        //create a use effect and fetch the data
+        const pokemon = await fetch("https://pokeapi.co/api/v2/pokemon/eevee");
+        const data = await pokemon.json();
+        console.log(data, "Output");
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  }, []);
+
   const h1Title = (name) => <h1>{name}</h1>;
 
   console.log(user);
   return (
     <>
-      <About data={user} setUser={setUser} title={h1Title} />
+      {/* <About data={user} setUser={setUser} title={h1Title} /> */}
+      <Navbar />
+      <AllPokemon data={user.data} />
+      <Form IsLoggedIn={false} />
+      <Routes />
     </>
   ); // react fragment
 }
