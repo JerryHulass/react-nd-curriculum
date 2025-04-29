@@ -14,7 +14,8 @@ export default function Todos() {
     dispatch(addTodo(input));
     setInput("");
   };
-
+  // figure out where to added that delete button and remember we need an ID
+  // add a styling if the item was completed or not
   return (
     <div>
       Todos
