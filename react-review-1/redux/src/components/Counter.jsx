@@ -8,7 +8,7 @@ import {
 // to use the actions we need to use these two functions called
 // useDispatch and useSelector
 // useSelector is doing => its specifing which reducer to pick
-// useDispatch is trigging the correct action that you want to fire.
+// ›
 import { useSelector, useDispatch } from "react-redux";
 
 export default function Counter() {
