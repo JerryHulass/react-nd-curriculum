@@ -6,7 +6,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   // piece of data
   // TODO
-  items: [],
+  items: [{ id: 1, title: "Clean the dishes ", completed: false }],
   //{     ...... DATA}
 };
 
@@ -16,8 +16,9 @@ const todosSlice = createSlice({
   name: "todos",
   initialState,
   // actions (functions) that your can perform on that data called your "todos"
-  reducer: {
+  reducers: {
     addTodo: (state, action) => {
+      console.log(action);
       state.items.push({
         id: Date.now(), // create the item with date
         title: action.payload, // thing we need to do
